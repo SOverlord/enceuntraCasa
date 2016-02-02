@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		
+		<title>Inicio Foráneo | Encuentra casa</title>
+
+		<!-- Bootstrap -->
+		<link href="/css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		
+		<!-- Estilos propios personalizados-->
+		<link href="/css/personalizado.css" rel="stylesheet">
+		
+	</head>
+	
+<!------------------------------------------------------------------------------------------------------------------------------->
+<!------------------------------------------------------------------------------------------------------------------------------->
+<!------------------------------------------------------------------------------------------------------------------------------->
+	
+	<body>
+		<header>
+			<nav class="navbar navbar-inverse">
+				<div class="container-fluid">
+					<!-- Brand and toggle get grouped for better mobile display -->
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							<a class="navbar-brand" href="#">Mi logo</a>
+						</div>
+					<!-- Menú lado Izquierdo -->
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav">
+							<li class="active"><a href="/inicioForaneo"><i class=" glyphicon glyphicon-home"></i> Inicio</a></li>
+                            <li><a href="/configuracionForaneo"><span class="glyphicon glyphicon-cog"></span> Mi Configuración</a></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-question-sign"></span> Ayuda</a></li>
+						</ul>
+						<!--Menú de Lado Derecho--> 
+                        <ul class="nav navbar-nav navbar-right">
+							<li><a href="#"><span class="glyphicon glyphicon-user"></span> {{ nombre }} </a></li>
+							<li><a href="/cerrarSesion"><span class="glyphicon glyphicon-off"></span> Cerrar Sesión</a></li>
+						</ul><!-- /.Menú de Lado Derecho-->
+					</div><!-- /.navbar-collapse -->
+				</div><!-- /.container-fluid -->
+			</nav>
+		</header>
+		
+		<!--Sección de Cuerpo
+		Aquí estará la pantalla central que verá el usuario. Aparecerán los controles laterales, los lugares en renta y opciones para
+		visualizar.
+		====================================================== -->
+		
+		<section>
+			<div class="row">
+<!------------------------------------------------------------------------------------------------------------------------------->
+				<!--Sección Lateral
+				Aquí estarán los controles básicos de ordenamiento: Por Costo (mayor, menor), Tipo (Pensión, Departamento, Casa), Admisión
+				(Hombres, Mujeres, Mixto)
+				========================================================== -->
+				<div class="col-md-2" style="background-color:#e6e6e6">		
+					<ul class="nav nav-pills nav-stacked">
+						<li role="presentation" class="active">
+							<a><b>Ordenar por tus necesidades</b></a>
+						</li><br>
+						
+						<form id="formNecesidades" name="formNecesidades">
+							<li role="presentation" class="active"><b>¿Qué costo?</b></li>
+							<input name="costo" id="mayor" value="mayor" type="radio"> Mayor<br>
+  	   				<input name="costo" id="menor" value="menor" type="radio"> Menor
+							
+							<li role="presentation" class="active"><b>¿Qué buscas?</b></li>
+							<input name="tipo" id="pension" value="pension" type="radio"> Pensión (recámara)<br>
+							<input name="tipo" id="departamento" value="departamento" type="radio"> Departamento<br>
+							<input name="tipo" id="casaRenta" value="casaRenta" type="radio"> Casa en renta<br>
+							
+							<li role="presentation" class="active"><b>¿Qué compañeros buscas?</b></li>
+							<input name="compañeros" id="hombres" value="hombres" type="radio"> Sólo hombres<br>
+							<input name="compañeros" id="mujeres" value="mujeres" type="radio"> Sólo mujeres<br>
+							<input name="compañeros" id="mixto" value="mixto" type="radio"> Mixto<br>
+							
+							<li role="presentation" class="active"><b>¿Qué tipo de habitación quieres?</b></li>
+							<input name="habitacion" id="compartida" value="compartida" type="radio"> Compartida<br>
+							<input name="habitacion" id="individual" value="individual" type="radio"> Individual<br>
+							
+							<br><button type="button" id="btnCosto" class="btn btn-success">Buscar</button>
+							
+						</form>
+						
+					</ul>
+				</div>			
+			
+<!------------------------------------------------------------------------------------------------------------------------------->
+			<!-- Sección Centro
+			Aquí se mostrarán todos los lugares disponibles
+			========================================================== -->
+				<div class="col-md-9">
+					
+				</div>
+			
+<!------------------------------------------------------------------------------------------------------------------------------->
+			</div><!-- /.row -->
+
+		</section>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="js/bootstrap.min.js"></script>
+	</body>
+</html>

@@ -1,0 +1,41 @@
+Version 3.5
+
+Caracteres especiales (ñ, Ñ, acentos...) no están permitidos. Se validará desde Javascript del lado del usuario para impedir el ingreso de estos caracteres
+
+Esta versión cuenta con acceso dividido.
+Los archivos "inicioArrendador.py" e "inicioForaneo.py" son las páginas internas principales.
+Cuando se inicia sesión, "crearSesion.py" recupera los datos de la sesión (Nombre de Usuario, nombre y tipo); donde:
+	- Nombre de Usuario -->	Correo registrado para iniciar sesión. (algunCorreo@cuenta.com)
+	- Nombre	-	-	-	-	->	Nombre del usuario registrado. (miPrimerNombre)
+	- Tipo	-	-	-	-	->	Tipo de sesión del usuario (Foráneo/Arrendador)
+	
+Recupera de dónde venimos: validar o registrar.
+	Temporalmente, ambas redirigen a la página principal
+	Una vez recuperadas, "crearSesion.py" toma el dato "tipo" y lo concatena:
+		if tipo == 'foraneo'
+			nos vamos a inicioForaneo
+		elif
+			nos vamos a inicioArrendador
+
+Internamente, cada página realiza una validación del tipo de usuario que ingresa. Esto para evitar que vía URL se ingrese desde foráneos a arrendador.
+class CLASE(session_module.BaseSessionHandler, webapp2.RequestHandler):
+    def get(self): 
+        #Sino existe una sesion redireccionamos al controler main.py
+        
+        else:
+            #Filtramos usuario
+            #Filtramos tipo de usuario
+
+            #Validamos que ingrese el tipo correcto de usuario
+                #Mostramos el contenido correspondiente
+            else:
+                #Regresamos al inicio del opuesto
+
+
+*Probar un proyecto en localhost
+	/<DIRECTORIO>/google_appengine/dev_appserver.py <CARPETA_DEL_PROYECTO>/
+	speedstream@speedstream-Aspire-E1-521:~/Escritorio/google_appengine$ dev_appserver.py ~/Escritorio/encuentraCasa/
+
+
+*Actualizar un proyecto
+	/<DIRECTORIO>/google_appengine/appcfg.py update <CARPETA_DEL_NUEVO>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+		<title>Inicio | Encuentra casa</title>
+
+		<!-- Bootstrap -->
+		<link href="/css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		
+		<!-- Estilos propios personalizados-->
+		<link href="/css/personalizado.css" rel="stylesheet">
+		
+	</head>
+	
+<!------------------------------------------------------------------------------------------------------------------------------->
+<!------------------------------------------------------------------------------------------------------------------------------->
+<!------------------------------------------------------------------------------------------------------------------------------->
+	
+	<body>
+		<header>
+			<nav class="navbar navbar-inverse">
+				<div class="container-fluid">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="#">Mi logo</a>
+					</div>
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav">
+							<li><a href="#"><i class="glyphicon glyphicon-home"></i> Inicio</a></li>
+	      					<li><a href="#"><span class="glyphicon glyphicon-question-sign"></span> Preguntas Frecuentes</a></li>
+	      					<li><a href="#"><span class="glyphicon glyphicon-user"></span> Quiénes Somos</a></li>
+						</ul>
+						
+					</div><!-- /.navbar-collapse -->
+				</div><!-- /.container-fluid -->
+			</nav>
+		</header>
+		
+		<!-- Sección Inicio
+		================================================== -->
+        <section id="banner">
+            <section id="form">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <img src="images/banner.png" width="100%" height="100%">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+		<section id="registroInicio">
+            <section id="form"><!--form-->
+                <div class="container">
+                    <div class="row" style="text-align:center; widh:100%; height: auto; background-color:#ABC4A1;">
+                        <div class="col-sm-5">
+                            <div class="login-form"><!--login form-->
+                                <h1>Ingresa a tu cuenta</h1>
+                                <form action="/validar_inicio_sesion" method="post">
+                                    <div class="error">
+                                        {% if errorValidar == "1" %}
+                                    <strong>CORREO Y/O CONTRASEÑA INVÁLIDOS</strong>
+                                    {% endif %}
+                                    </div>
+                                    <!--////////////////////////////////////////////////////////////////-->
+                                    <input type="email" name="email" id="email" placeholder="Correo electrónico" autofocus required/>
+                                    <input type="password" name="password" id="password" placeholder="Contraseña" required/><br><br>
+                                    <button type="submit" class="btn btn-default">Ingresar</button>
+                                </form>
+                            </div><!--/login form-->
+                        </div>
+                        <div class="col-sm-2" style="vertical-align: middle; text-align: center;">
+                            <h2 class="or">O</h2>
+                        </div>
+                        <div class="col-sm-5">
+                            <div class="signup-form"><!--sign up form-->
+                                <h2>¿Eres nuevo? ¡Regístrate!</h2>
+                                <form class="navbar-form navbar-left" id="formRegistro" name="formRegistro" action="/registrarUsuario" method="post">
+                                    <input type="text" name="str_nombre" id="str_nombre" placeholder="Nombre" required autofocus/>
+                                    <input type="text" name="str_apellidos" id="str_apellidos" placeholder="Apellidos" required/>
+                                    <input type="email" name="str_email" id="str_email" placeholder="E-mail" required>
+                                    <!--<input type="email" name="check-email" id="check-email" placeholder="Repite tu e-mail">-->
+                                    <input type="password" name="str_password" id="str_password" placeholder="Contraseña" required/>
+                                    <!--<input type="password" name="check-password" id="check-password" placeholder="Repite tu cotraseña"/>-->
+                                    <div>
+		      				            <input name="str_tipo" id="str_tipo" value="foraneo" type="radio" required autofocus> Soy foráneo
+		      				            <input name="str_tipo" id="str_tipo" value="arrendador" type="radio" required> Soy arrendador
+                                    </div><br>
+                                    <button type="submit" class="btn btn-default">Registrar</button>
+                                </form>
+                            </div><!--/sign up form-->
+                        </div>
+                    </div>
+                </div>
+            </section><!--/form-->
+        </section>
+		
+   
+		<!-- Sección FAQ
+		================================================== -->
+		<section id="faq">
+		</section>
+		
+		
+		<!-- Sección Quiénes Somos
+		================================================== -->
+		<section id="quienessomos">
+		</section>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="/js/bootstrap.min.js"></script>
+	</body>
+</html>

@@ -1,0 +1,80 @@
+application: encuentra-casa
+version: 2
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+handlers:
+
+#Paginas internas 
+- url: /principal   #Prueba
+  script: principal.application 
+
+#Estadisticas de la pagina
+- url: /estadisticas   #Prueba
+  script: estadisticas.application
+
+#Foraneo
+- url: /inicioForaneo
+  script: inicioForaneo.application
+
+- url: /configuracionForaneo
+  script: configuracionForaneo.application
+
+#Arrendador
+- url: /inicioArrendador
+  script: inicioArrendador.application
+
+- url: /publicarNuevo
+  script: publicarNuevo.application
+
+#Comportamientos generales
+- url: /validar_inicio_sesion
+  script: validar_inicio_sesion.application
+
+- url: /registrarUsuario
+  script: registrarUsuario.application
+
+- url: /crearSesion
+  script: crearSesion.application
+
+- url: /cerrarSesion
+  script: cerrarSesion.application
+
+- url: /cargarArchivo
+  script: cargarArchivo.application
+
+- url: /mostrar
+  script: mostrar.application
+
+- url: /eliminarFotoPerfil
+  script: eliminarFotoPerfil.application
+
+- url: /actualizarPerfil
+  script: actualizarPerfil.application
+
+#Carpetas internas.
+- url: /view
+  script: viewhandler.application
+
+- url: /images
+  static_dir: images
+
+- url: /css
+  static_dir: css
+
+- url: /fonts
+  static_dir: fonts
+
+- url: /js
+  static_dir: js
+
+#index.html && main.py
+- url: .*
+  script: main.application
+
+libraries:
+- name: webapp2
+  version: "2.5.1"
+- name: jinja2
+  version: latest
